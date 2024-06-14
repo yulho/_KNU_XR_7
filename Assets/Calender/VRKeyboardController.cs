@@ -14,7 +14,7 @@ public class VRKeyboardController : MonoBehaviour
     void Start()
     {
         vrKeyboard.SetActive(false);  
-
+    }
     public void OnInputFieldSelected()
     {
         vrKeyboard.SetActive(true);  
@@ -24,5 +24,6 @@ public class VRKeyboardController : MonoBehaviour
     {
         vrKeyboard.SetActive(false);  
     }
+
 }
 
