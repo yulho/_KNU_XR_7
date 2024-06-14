@@ -22,7 +22,6 @@ public class Exitbutton : MonoBehaviour
 
     public void OnButtonClick()
     {
-        // 버튼 클릭 시 다른 UI 활성화
         OverlayUI.SetActive(true);
         CalenderUI.SetActive(false);
     }
