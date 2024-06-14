@@ -23,7 +23,7 @@ public class Overlay : MonoBehaviour
 
     public void OnButtonClick()
     {
-        // 버튼 클릭 시 다른 UI 활성화
+        
         OverlayUI.SetActive(false);
         CalenderUI.SetActive(true);
     }
