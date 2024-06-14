@@ -5,40 +5,34 @@ using TMPro;
 
 public class VirtualKeyboard : MonoBehaviour
 {
-    // ÇöÀç ÀÔ·ÂµÈ ¹®ÀÚ¿­À» ÀúÀåÇÒ º¯¼ö
+    
     private string currentInput = "";
-
-    // ÀÔ·ÂµÈ ¹®ÀÚ¿­À» Ç¥½ÃÇÒ InputField
+    
     public TMP_InputField inputField;
 
-    // Å° Å¬¸¯ ÀÌº¥Æ®¸¦ Ã³¸®ÇÒ ÇÔ¼ö
+    
     public void OnKeyClick(string key)
     {
-        // Å¬¸¯µÈ Å°¿¡ µû¶ó ´Ù¸¥ µ¿ÀÛÀ» ¼öÇà
         switch (key)
         {
             case "backspace":
-                // Backspace Å°¸¦ Å¬¸¯ÇÑ °æ¿ì ¸¶Áö¸· ¹®ÀÚ¸¦ Á¦°Å
                 if (currentInput.Length > 0)
                 {
                     currentInput = currentInput.Substring(0, currentInput.Length - 1);
                 }
                 break;
             case "space":
-                // Backspace Å°¸¦ Å¬¸¯ÇÑ °æ¿ì ¸¶Áö¸· ¹®ÀÚ¸¦ Á¦°Å
                 currentInput += " ";
                 break;
             case "reset":
-                // Backspace Å°¸¦ Å¬¸¯ÇÑ °æ¿ì ¸¶Áö¸· ¹®ÀÚ¸¦ Á¦°Å
                 currentInput = "";
                 break;
             default:
-                // ±× ¿ÜÀÇ Å°¸¦ Å¬¸¯ÇÑ °æ¿ì, ÇØ´ç Å°¸¦ ÇöÀç ÀÔ·Â¿¡ Ãß°¡
                 currentInput += key;
                 break;
         }
 
-        // InputField¿¡ ÇöÀç ÀÔ·ÂµÈ ¹®ÀÚ¿­ ¾÷µ¥ÀÌÆ®
+        // InputFieldì— í˜„ì¬ ì…ë ¥ëœ ë¬¸ìì—´ ì—…ë°ì´íŠ¸
         inputField.text = currentInput;
     }
 }
